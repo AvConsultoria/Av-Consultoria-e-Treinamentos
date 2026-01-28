@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  line-height: 1.6;
+  color: #333;
+}
+
+footer,
+footer * {
+  text-align: center !important;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #5a94eb, #198754);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0; /* CONTROLA A ALTURA DO HEADER */
+}
+
+header h1 {
+  color: #fff;
+  font-size: 26px;
+  margin: 0; /* MUITO IMPORTANTE */
+}
+
+nav {
+  margin: 0; /* REMOVE EMPURRÃO */
+}
+
+nav a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, #5a94eb, #198754);
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.hero-content {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.hero-text {
+  max-width: 500px;
+}
+.hero-img img {
+  max-width: 350px;
+  width: 100%;
+}
+.hero-text {
+  text-align: center;
+}
+
+.hero-text p {
+  text-align: center;
+}
+
+/* SEÇÕES */
+.section {
+  padding: 60px 20px;
+}
+.bg {
+  background: #f5f5f5;
+}
+
+/* CARDS */
+.cards-servicos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.card-servico {
+  background: #fff;
+  border: 2px solid #3a693e;
+  border-radius: 20px;
+  padding: 30px 20px;
+  text-align: center; /* 👈 centraliza textos */
+  width: 220px;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  display: flex; /* 👇 garante tudo no centro */
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-servico:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  width: 80px;
+  height: 80px;
+  background: #3a693e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.card-icon img {
+  width: 120%;
+  height: 120%;
+  object-fit: contain;
+}
+
+.card-servico h5,
+.card-servico a {
+  text-align: center; /* 👈 texto e link no centro */
+}
+
+.card-servico h5 {
+  color: #3a693e;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.galeria-fotos {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.galeria-fotos h2 {
+  margin-bottom: 30px;
+}
+
+/* Grid da galeria */
+.grid-galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.grid-galeria img {
+  width: 100%;
+  height: 220px; /* ALTURA das fotos */
+  object-fit: cover;
+  border-radius: 18px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito hover */
+.grid-galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivo celular */
+@media (max-width: 600px) {
+  .grid-galeria img {
+    height: 180px;
+  }
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .lista-fotos img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+#contato a {
+  color: #000000 !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#contato a:hover {
+  color: #2f5633 !important;
+  text-decoration: underline;
+}
+
+/* Link normal */
+a.meu-link {
+  color: #3a693e; /* cor do link */
+  text-decoration: none; /* remove o sublinhado se quiser */
+}
+
+/* Link quando o mouse passa por cima */
+a.meu-link:hover {
+  color: rgb(1, 41, 19); /* cor ao passar o mouse */
+  text-decoration: underline; /* opcional, adiciona sublinhado no hover */
+}
+
+/* Link visitado */
+a.meu-link:visited {
+  color: rgb(30, 66, 44); /* cor depois de o usuário ter clicado */
+}
+
+/* Link ativo (quando clicado) */
+a.meu-link:active {
+  color: rgb(32, 68, 32); /* cor no momento do clique */
+}
+
+/* CARDS QUEM SOMOS */
+.cards-institucional {
+  display: flex;
+  gap: 25px;
+  margin-top: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-institucional {
+  background: linear-gradient(135deg, #96bdf7, #b0ffda);
+  color: #333;
+  border-radius: 20px;
+  padding: 30px;
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-institucional:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-institucional h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.card-institucional p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .card-institucional {
+    width: 100%;
+  }
+}
+
+/* LISTA */
+.lista {
+  list-style: none;
+  margin-top: 20px;
+}
+.lista li {
+  margin: 10px 0;
+}
+
+/* BOTÕES */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  background: #198754;
+  color: #fff;
+  text-decoration: none;
+}
+.whatsapp {
+  background: #25d366;
+}
+
+.imagem-contato {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.imagem-contato img {
+  max-width: 250px; /* 👉 AQUI você muda o tamanho */
+  width: 100%;
+  height: auto;
+}
+
+/* WHATSAPP FLUTUANTE */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: #fff;
+  font-size: 26px;
+  padding: 15px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(135deg, #5a94eb, #198754);
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  nav {
+    margin-top: 10px;
+  }
+  nav a {
+    display: inline-block;
+    margin: 5px;
+  }
+} /* ====================== MOBILE FIRST (CELULAR) ====================== */
+@media (max-width: 768px) {
+  /* HEADER */
+  header {
+    padding: 15px 10px;
+  }
+  .header-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+  header h1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  nav a {
+    margin: 0;
+    font-size: 0.9rem;
+  } /* HERO */
+  .hero {
+    padding: 50px 15px;
+  }
+  .hero-content {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .hero-text h2 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+  .hero-img img {
+    max-width: 220px;
+  } /* BOTÃO */
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 14px;
+    font-size: 1rem;
+  } /* SEÇÕES */
+  .section {
+    padding: 45px 15px;
+  }
+  .section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  .section p {
+    font-size: 0.95rem;
+  }
+  /* CARDS */
+  .cards-servicos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .card-servico {
+    background: #fff;
+    border: 2px solid #3a693e; /* cor da borda verde */
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    width: 220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .card-servico:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .card-icon {
+    width: 80px;
+    height: 80px;
+    background: #3a693e; /* círculo verde */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px auto;
+  }
+
+  .card-icon img {
+    width: 120%;
+    height: 120%;
+    object-fit: contain;
+  }
+
+  .card-servico p {
+    color: #3a693e;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  /* LISTA DIFERENCIAL */
+  .lista li {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+  /* CONTATO */
+  #contato p {
+    font-size: 0.95rem;
+  }
+
+  /* Menor no celular */
+  @media (max-width: 768px) {
+    .imagem-contato img {
+      max-width: 180px;
+    }
+  }
+
+  /* FOOTER */
+  footer {
+    background: linear-gradient(135deg, #5a94eb, #198754);
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* WHATSAPP FLOAT */
+  .whatsapp-float {
+    bottom: 15px;
+    right: 15px;
+    font-size: 22px;
+    padding: 12px;
+  }
+}
+.section h2,
+.hero-text h2,
+footer p {
+  text-align: center;
+}
+.section p,
+.card p {
+  text-align: justify;
+}
